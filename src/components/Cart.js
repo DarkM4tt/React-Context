@@ -1,7 +1,14 @@
 import React from "react";
 
 const Cart = () => {
-  return <h1>Cart</h1>;
+  return (
+    <div style={{ textAlign: "center" }}>
+      <span style={{ fontSize: 30 }}>My Cart</span>
+      <br />
+      <span style={{ fontSize: 30 }}>Total: Rs. 100</span>
+      <div className="productContainer"></div>
+    </div>
+  );
 };
 
 export default Cart;

@@ -5,7 +5,7 @@ import "./styles.css";
 
 faker.seed(100);
 
-const Home = ({ cart, setCart }) => {
+const Home = () => {
   const productsArray = [...Array(20)].map(() => ({
     id: faker.datatype.uuid(),
     name: faker.commerce.product(),
@@ -14,16 +14,11 @@ const Home = ({ cart, setCart }) => {
   }));
 
   const [products] = useState(productsArray);
-  console.log(cart);
+
   return (
     <div className="productContainer">
       {products.map((prod) => (
-        <SingleProduct
-          key={prod.id}
-          prod={prod}
-          cart={cart}
-          setCart={setCart}
-        />
+        <SingleProduct key={prod.id} prod={prod} />
       ))}
     </div>
   );
